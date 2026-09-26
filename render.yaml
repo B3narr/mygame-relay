@@ -1,0 +1,10 @@
+# Render.com blueprint: New > Blueprint, pick this repository, and Render
+# sets up the relay as a free web service.
+services:
+  - type: web
+    name: chancebound-relay
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python relay.py
+    healthCheckPath: /
